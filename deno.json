@@ -1,0 +1,21 @@
+{
+    "workspace": ["./apps/*"],
+    "tasks": {
+        "nexus::start": "deno task -f @slyng/nexus start",
+        "slyng::dev": "deno task -f @slyng/slyng tauri dev"
+    },
+    "imports": {
+        "@std/assert": "jsr:@std/assert@1"
+    },
+    "nodeModulesDir": "auto",
+    "compilerOptions": {
+        "jsx": "precompile",
+        "jsxImportSource": "hono/jsx"
+    },
+    "fmt": {
+        "useTabs": false,
+        "indentWidth": 4,
+        "lineWidth": 80,
+        "semiColons": true
+    }
+}
