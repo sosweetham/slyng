@@ -30,6 +30,6 @@ export default defineConfig(async () => ({
         },
         fs: {
             allow: ["../../node_modules"],
-        }
+        },
     },
 }));

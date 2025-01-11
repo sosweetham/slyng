@@ -2,6 +2,9 @@
   "version": "4",
   "specifiers": {
     "jsr:@hono/hono@^4.6.16": "4.6.16",
+    "jsr:@noble/hashes@1.7.0-1": "1.7.0-1",
+    "jsr:@scure/base@1.2.1": "1.2.1",
+    "jsr:@scure/bip39@^1.5.1": "1.5.1",
     "jsr:@std/assert@1": "1.0.6",
     "jsr:@std/internal@^1.0.4": "1.0.4",
     "npm:@sveltejs/adapter-static@^3.0.6": "3.0.8_@sveltejs+kit@2.15.2__@sveltejs+vite-plugin-svelte@5.0.3___svelte@5.17.3____acorn@8.14.0___vite@6.0.7__svelte@5.17.3___acorn@8.14.0__vite@6.0.7_vite@6.0.7",
@@ -13,15 +16,27 @@
     "npm:@tauri-apps/plugin-opener@2": "2.2.3",
     "npm:@tauri-apps/plugin-store@^2.2.0": "2.2.0",
     "npm:create-tauri-app@*": "4.5.9",
-    "npm:svelte-check@4": "4.1.3_svelte@5.17.3__acorn@8.14.0_typescript@5.6.3",
+    "npm:svelte-check@4": "4.1.3_svelte@5.17.3__acorn@8.14.0_typescript@5.7.3",
     "npm:svelte@5": "5.17.3_acorn@8.14.0",
-    "npm:typescript@~5.6.2": "5.6.3",
     "npm:vite@6.0.7": "6.0.7",
     "npm:vite@^6.0.3": "6.0.7"
   },
   "jsr": {
     "@hono/hono@4.6.16": {
       "integrity": "b540c6b1352d73142895f7bb6bfd0b6cc514ede61c12940338c4ae5dd06cb326"
+    },
+    "@noble/hashes@1.7.0-1": {
+      "integrity": "1ed98c552aea1e834def670d4d7964a646beb25e9aa80f4f28774d8096894989"
+    },
+    "@scure/base@1.2.1": {
+      "integrity": "679e2d2e1e5b2e3739e99a48ef2cd67d5eb5dc6c58220984f2a5088e2d6f6e29"
+    },
+    "@scure/bip39@1.5.1": {
+      "integrity": "ef3792848b98e4c382eac10d07b4c6aca442aad7c1a70802bf6804d5cf47c0f5",
+      "dependencies": [
+        "jsr:@noble/hashes",
+        "jsr:@scure/base"
+      ]
     },
     "@std/assert@1.0.6": {
       "integrity": "1904c05806a25d94fe791d6d883b685c9e2dcd60e4f9fc30f4fc5cf010c72207",
@@ -497,8 +512,8 @@
         "source-map-js"
       ]
     },
-    "readdirp@4.0.2": {
-      "integrity": "sha512-yDMz9g+VaZkqBYS/ozoBJwaBhTbZo3UNYQHNRw1D3UFQB8oHB4uS/tAODO+ZLjGWmUbKnIlOWO+aaIiAxrUWHA=="
+    "readdirp@4.1.0": {
+      "integrity": "sha512-4+hHiVsxlm4OVSNFpAIrOGyGeG9kNLGcLMqvSGL5Rj2NOYBDQiQ6lJRViwAZ80i8SNbY8kCpdjgJy5PNALARew=="
     },
     "rollup@4.30.1": {
       "integrity": "sha512-mlJ4glW020fPuLi7DkM/lN97mYEZGWeqBnrljzN0gs7GLctqX3lNWxKQ7Gl712UAX+6fog/L3jh4gb7R6aVi3w==",
@@ -546,7 +561,7 @@
     "source-map-js@1.2.1": {
       "integrity": "sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA=="
     },
-    "svelte-check@4.1.3_svelte@5.17.3__acorn@8.14.0_typescript@5.6.3": {
+    "svelte-check@4.1.3_svelte@5.17.3__acorn@8.14.0_typescript@5.7.3": {
       "integrity": "sha512-IEMoQDH+TrPKwKeIyJim+PU8FxnzQMXsFHR/ldErkHpPXEGHCujHUXiR8jg6qDMqzsif5BbDOUFORltu87ex7g==",
       "dependencies": [
         "@jridgewell/trace-mapping",
@@ -587,8 +602,8 @@
     "totalist@3.0.1": {
       "integrity": "sha512-sf4i37nQ2LBx4m3wB74y+ubopq6W/dIzXg0FDGjsYnZHVa1Da8FH853wlL2gtUhg+xJXjfk3kUZS3BRoQeoQBQ=="
     },
-    "typescript@5.6.3": {
-      "integrity": "sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw=="
+    "typescript@5.7.3": {
+      "integrity": "sha512-84MVSjMEHP+FQRPy3pX9sTVV/INIex71s9TL2Gm5FG/WG1SqXeKyZ0k7/blY/4FdOzI12CBy1vGc4og/eus0fw=="
     },
     "vite@6.0.7": {
       "integrity": "sha512-RDt8r/7qx9940f8FcOIAH9PTViRrghKaK2K1jY3RaAURrEUbm9Du1mJ72G+jlhtG3WwodnfzY8ORQZbBavZEAQ==",
@@ -611,6 +626,7 @@
   },
   "workspace": {
     "dependencies": [
+      "jsr:@scure/bip39@^1.5.1",
       "jsr:@std/assert@1"
     ],
     "members": {
@@ -620,21 +636,18 @@
         ]
       },
       "apps/slyng": {
-        "packageJson": {
-          "dependencies": [
-            "npm:@sveltejs/adapter-static@^3.0.6",
-            "npm:@sveltejs/kit@^2.9.0",
-            "npm:@sveltejs/vite-plugin-svelte@5",
-            "npm:@tauri-apps/api@2",
-            "npm:@tauri-apps/cli@2",
-            "npm:@tauri-apps/plugin-opener@2",
-            "npm:@tauri-apps/plugin-store@^2.2.0",
-            "npm:svelte-check@4",
-            "npm:svelte@5",
-            "npm:typescript@~5.6.2",
-            "npm:vite@^6.0.3"
-          ]
-        }
+        "dependencies": [
+          "npm:@sveltejs/adapter-static@^3.0.6",
+          "npm:@sveltejs/kit@^2.9.0",
+          "npm:@sveltejs/vite-plugin-svelte@5",
+          "npm:@tauri-apps/api@2",
+          "npm:@tauri-apps/cli@2",
+          "npm:@tauri-apps/plugin-opener@2",
+          "npm:@tauri-apps/plugin-store@^2.2.0",
+          "npm:svelte-check@4",
+          "npm:svelte@5",
+          "npm:vite@^6.0.3"
+        ]
       }
     }
   }
