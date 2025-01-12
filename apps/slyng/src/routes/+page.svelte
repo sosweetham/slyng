@@ -42,7 +42,7 @@
     <p>{greetMsg}</p>
     <a href="/create-identity">
         <button>
-            Create Account
+            Create Identity
         </button>
     </a>
 </main>

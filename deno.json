@@ -4,14 +4,12 @@
         "nexus::start": "deno task -f @slyng/nexus start",
         "slyng::dev": "deno task -f @slyng/slyng tauri dev"
     },
-    "imports": {
-        "@scure/bip39": "jsr:@scure/bip39@^1.5.1",
-        "@std/assert": "jsr:@std/assert@1"
-    },
     "nodeModulesDir": "auto",
     "compilerOptions": {
         "jsx": "precompile",
-        "jsxImportSource": "hono/jsx"
+        "jsxImportSource": "hono/jsx",
+        "checkJs": true,
+        "strict": true
     },
     "fmt": {
         "useTabs": false,
@@ -19,5 +17,6 @@
         "lineWidth": 80,
         "semiColons": true
     },
-    "unstable": ["fmt-component"]
+    "importMap": "./import_map.json",
+    "unstable": ["fmt-component", "sloppy-imports"]
 }

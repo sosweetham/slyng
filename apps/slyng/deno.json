@@ -11,14 +11,19 @@
     },
     "license": "MIT",
     "imports": {
+        "@scure/bip39": "jsr:@scure/bip39@^1.5.1",
         "@tauri-apps/api": "npm:@tauri-apps/api@^2",
         "@tauri-apps/plugin-opener": "npm:@tauri-apps/plugin-opener@^2",
         "@tauri-apps/plugin-store": "npm:@tauri-apps/plugin-store@^2.2.0",
         "@sveltejs/adapter-static": "npm:@sveltejs/adapter-static@^3.0.6",
         "@sveltejs/kit": "npm:@sveltejs/kit@^2.9.0",
         "@sveltejs/vite-plugin-svelte": "npm:@sveltejs/vite-plugin-svelte@^5.0.0",
+        "autoprefixer": "npm:autoprefixer@^10.4.20",
+        "daisyui": "npm:daisyui@^4.12.23",
+        "postcss": "npm:postcss@^8.4.49",
         "svelte": "npm:svelte@^5.0.0",
         "svelte-check": "npm:svelte-check@^4.0.0",
+        "tailwindcss": "npm:tailwindcss@^3.4.17",
         "vite": "npm:vite@^6.0.3",
         "@tauri-apps/cli": "npm:@tauri-apps/cli@^2"
     },
@@ -29,6 +34,5 @@
         "lineWidth": 80,
         "semiColons": true,
         "proseWrap": "preserve"
-    },
-    "unstable": ["fmt-component"]
+    }
 }
