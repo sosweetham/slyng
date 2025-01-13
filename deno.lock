@@ -2,6 +2,7 @@
   "version": "4",
   "specifiers": {
     "jsr:@hono/hono@^4.6.16": "4.6.16",
+    "npm:@deno/vite-plugin@^1.0.2": "1.0.2_vite@6.0.7_@types+node@22.5.4",
     "npm:@scure/bip39@^1.5.1": "1.5.1",
     "npm:@sveltejs/adapter-static@^3.0.6": "3.0.8_@sveltejs+kit@2.15.2__@sveltejs+vite-plugin-svelte@5.0.3___svelte@5.17.3____acorn@8.14.0___vite@6.0.7__svelte@5.17.3___acorn@8.14.0__vite@6.0.7_vite@6.0.7",
     "npm:@sveltejs/kit@^2.9.0": "2.15.2_@sveltejs+vite-plugin-svelte@5.0.3__svelte@5.17.3___acorn@8.14.0__vite@6.0.7_svelte@5.17.3__acorn@8.14.0_vite@6.0.7",
@@ -39,6 +40,12 @@
       "dependencies": [
         "@jridgewell/gen-mapping",
         "@jridgewell/trace-mapping"
+      ]
+    },
+    "@deno/vite-plugin@1.0.2_vite@6.0.7_@types+node@22.5.4": {
+      "integrity": "sha512-ZaC5W1yCb1xdRURU5qHFHrxZABr1tC68tS73/YhXUUbe9nuytCV4CG/dpLxMkxS64Fs3YwcqEz2k1eAqE9W5SQ==",
+      "dependencies": [
+        "vite@6.0.7_@types+node@22.5.4"
       ]
     },
     "@esbuild/aix-ppc64@0.24.2": {
@@ -267,7 +274,7 @@
         "sirv",
         "svelte",
         "tiny-glob",
-        "vite"
+        "vite@6.0.7"
       ]
     },
     "@sveltejs/vite-plugin-svelte-inspector@4.0.1_@sveltejs+vite-plugin-svelte@5.0.3__svelte@5.17.3___acorn@8.14.0__vite@6.0.7_svelte@5.17.3__acorn@8.14.0_vite@6.0.7": {
@@ -276,7 +283,7 @@
         "@sveltejs/vite-plugin-svelte",
         "debug",
         "svelte",
-        "vite"
+        "vite@6.0.7"
       ]
     },
     "@sveltejs/vite-plugin-svelte@5.0.3_svelte@5.17.3__acorn@8.14.0_vite@6.0.7": {
@@ -288,7 +295,7 @@
         "kleur",
         "magic-string",
         "svelte",
-        "vite",
+        "vite@6.0.7",
         "vitefu"
       ]
     },
@@ -1177,10 +1184,20 @@
         "rollup"
       ]
     },
+    "vite@6.0.7_@types+node@22.5.4": {
+      "integrity": "sha512-RDt8r/7qx9940f8FcOIAH9PTViRrghKaK2K1jY3RaAURrEUbm9Du1mJ72G+jlhtG3WwodnfzY8ORQZbBavZEAQ==",
+      "dependencies": [
+        "@types/node",
+        "esbuild",
+        "fsevents",
+        "postcss",
+        "rollup"
+      ]
+    },
     "vitefu@1.0.5_vite@6.0.7": {
       "integrity": "sha512-h4Vflt9gxODPFNGPwp4zAMZRpZR7eslzwH2c5hn5kNZ5rhnKyRJ50U+yGCdc2IRaBs8O4haIgLNGrV5CrpMsCA==",
       "dependencies": [
-        "vite"
+        "vite@6.0.7"
       ]
     },
     "which@2.0.2": {
@@ -1221,6 +1238,7 @@
       },
       "apps/slyng": {
         "dependencies": [
+          "npm:@deno/vite-plugin@^1.0.2",
           "npm:@scure/bip39@^1.5.1",
           "npm:@sveltejs/adapter-static@^3.0.6",
           "npm:@sveltejs/kit@^2.9.0",

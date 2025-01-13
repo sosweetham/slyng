@@ -11,6 +11,7 @@
     },
     "license": "MIT",
     "imports": {
+        "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.2",
         "@scure/bip39": "npm:@scure/bip39@^1.5.1",
         "@tauri-apps/api": "npm:@tauri-apps/api@^2",
         "@tauri-apps/plugin-opener": "npm:@tauri-apps/plugin-opener@^2",

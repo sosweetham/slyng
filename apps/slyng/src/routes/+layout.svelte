@@ -7,7 +7,7 @@
     import { onMount } from "svelte";
     import { appDataDir } from "@tauri-apps/api/path";
     import { swipe, type SwipeCustomEvent } from "svelte-gestures";
-    import {DeviceInfo} from "$lib/svelte/device-info.svelte";
+    import { DeviceInfo } from "$lib/svelte/device-info.svelte";
 
     import "../app.css";
 
@@ -100,7 +100,7 @@
     <div
         class="
             sidebar bg-base-300 w-64 h-full fixed md:static z-50 md:transform-none
-            md:block
+            md:block flex flex-col
         "
         class:hidden-sm={!isSidebarVisible && !DeviceInfo.canHover}
         class:visible-sm={isSidebarVisible && !DeviceInfo.canHover}
@@ -130,7 +130,8 @@
                         <li>
                             <a
                                 class="capitalize"
-                                href={splitPath.slice(0, index + 1).join("/")}
+                                href={splitPath.slice(0, index + 1)
+                                .join("/")}
                             >{path.split("-").join(" ")}</a>
                         </li>
                     {/if}

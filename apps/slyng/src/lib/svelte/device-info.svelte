@@ -42,8 +42,14 @@
             let ViewportWidth = window.innerWidth;
             let ViewportHeight = window.innerHeight;
 
-            let smallerEdgeSize = Math.min(ViewportWidth, ViewportHeight);
-            let largerEdgeSize = Math.max(ViewportWidth, ViewportHeight);
+            let smallerEdgeSize = Math.min(
+                ViewportWidth,
+                ViewportHeight,
+            );
+            let largerEdgeSize = Math.max(
+                ViewportWidth,
+                ViewportHeight,
+            );
 
             return smallerEdgeSize <= 480 && largerEdgeSize <= 896;
         } else {
@@ -188,7 +194,7 @@
     function MediaQuery(Query: string): boolean {
         let MediaMatcher: any = window.matchMedia ||
             // @ts-ignore
-            window["webkitMatchmedia"]
+            window["webkitMatchmedia"];
 
         return MediaMatcher != null && MediaMatcher(Query).matches;
     }
@@ -196,10 +202,15 @@
     /**** rewrite media query rules for legacy browsers on touch devices ****/
 
     function ListElement(List: any, Index: number): any {
-        return typeof List.item === "function" ? List.item(Index) : List[Index];
+        return typeof List.item === "function"
+            ? List.item(Index)
+            : List[Index];
     }
 
-    function ListHasElementMatching(List: any, Pattern: RegExp): boolean {
+    function ListHasElementMatching(
+        List: any,
+        Pattern: RegExp,
+    ): boolean {
         for (let i = 0, l = List.length; i < l; i++) {
             if (Pattern.test(ListElement(List, i))) {
                 return true;
@@ -228,11 +239,13 @@
                                     /handheld/i,
                                 )
                             ) {
-                                let Media = (Rule as CSSMediaRule).media; // reference, not copy
-                                Media.mediaText = Media.mediaText.replace(
-                                    "handheld",
-                                    "screen",
-                                );
+                                let Media =
+                                    (Rule as CSSMediaRule).media; // reference, not copy
+                                Media.mediaText = Media.mediaText
+                                    .replace(
+                                        "handheld",
+                                        "screen",
+                                    );
                             }
                         }
                     }
@@ -244,7 +257,10 @@
                 for (let i = 0, l = Links.length; i < l; i++) {
                     let Link = Links[i];
                     if (/handheld/i.test(Link.media)) {
-                        Link.media = Link.media.replace("handheld", "screen");
+                        Link.media = Link.media.replace(
+                            "handheld",
+                            "screen",
+                        );
                     }
                 }
 
@@ -260,12 +276,18 @@
 
     /**** Event Handler Registry ****/
 
-    type SDI_EventHandlerRecord = { Handler: Function; onceOnly: boolean };
+    type SDI_EventHandlerRecord = {
+        Handler: Function;
+        onceOnly: boolean;
+    };
     type SDI_EventHandlerRegistry = SDI_EventHandlerRecord[];
 
     /**** registerHandler ****/
 
-    function registerHandler(Handler: Function, onceOnly: boolean): void {
+    function registerHandler(
+        Handler: Function,
+        onceOnly: boolean,
+    ): void {
         if (typeof Handler !== "function") {
             throw new Error("handler function expected");
         }
@@ -355,7 +377,7 @@
             } // a bit inefficient, but DRY
         }
     }
-    
+
     class DeviceInfo {
         static get isMobile() {
             return DeviceIsMobile();
@@ -383,5 +405,11 @@
         }
     }
 
-    export { DeviceInfo, onPointingAccuracyChanged, oncePointingAccuracyChanged, offPointingAccuracyChanged, rewriteMediaQueriesOnLegacyTouchDevices };
+    export {
+        DeviceInfo,
+        offPointingAccuracyChanged,
+        oncePointingAccuracyChanged,
+        onPointingAccuracyChanged,
+        rewriteMediaQueriesOnLegacyTouchDevices,
+    };
 </script>
