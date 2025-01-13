@@ -1,7 +1,7 @@
 {
-  "imports": {
-    "$app/": "./node_modules/@sveltejs/kit/src/runtime/app/",
-    "@sveltejs/vite-plugin-svelte": "./node_modules/@sveltejs/vite-plugin-svelte/",
-    "@sveltejs/adapter-static": "./node_modules/@sveltejs/adapter-static/"
-  }
+    "imports": {
+        "$app/": "./node_modules/@sveltejs/kit/src/runtime/app/",
+        "@sveltejs/vite-plugin-svelte": "./node_modules/@sveltejs/vite-plugin-svelte/",
+        "@sveltejs/adapter-static": "./node_modules/@sveltejs/adapter-static/"
+    }
 }
