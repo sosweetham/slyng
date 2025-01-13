@@ -11,7 +11,7 @@
     },
     "license": "MIT",
     "imports": {
-        "@scure/bip39": "jsr:@scure/bip39@^1.5.1",
+        "@scure/bip39": "npm:@scure/bip39@^1.5.1",
         "@tauri-apps/api": "npm:@tauri-apps/api@^2",
         "@tauri-apps/plugin-opener": "npm:@tauri-apps/plugin-opener@^2",
         "@tauri-apps/plugin-store": "npm:@tauri-apps/plugin-store@^2.2.0",
@@ -23,16 +23,10 @@
         "postcss": "npm:postcss@^8.4.49",
         "svelte": "npm:svelte@^5.0.0",
         "svelte-check": "npm:svelte-check@^4.0.0",
+        "svelte-gestures": "npm:svelte-gestures@^5.1.2",
         "tailwindcss": "npm:tailwindcss@^3.4.17",
         "vite": "npm:vite@^6.0.3",
         "@tauri-apps/cli": "npm:@tauri-apps/cli@^2"
     },
-    "exports": {},
-    "fmt": {
-        "useTabs": false,
-        "indentWidth": 4,
-        "lineWidth": 80,
-        "semiColons": true,
-        "proseWrap": "preserve"
-    }
+    "exports": {}
 }

@@ -2,7 +2,10 @@
     "workspace": ["./apps/*"],
     "tasks": {
         "nexus::start": "deno task -f @slyng/nexus start",
-        "slyng::dev": "deno task -f @slyng/slyng tauri dev"
+        "slyng::dev": "deno task -f @slyng/slyng tauri dev",
+        "slyng::build": "deno task -f @slyng/slyng tauri build",
+        "slyng::ios::init": "deno task -f @slyng/slyng tauri ios init",
+        "slyng::ios::dev": "deno task -f @slyng/slyng tauri ios dev"
     },
     "nodeModulesDir": "auto",
     "compilerOptions": {
@@ -15,7 +18,8 @@
         "useTabs": false,
         "indentWidth": 4,
         "lineWidth": 80,
-        "semiColons": true
+        "semiColons": true,
+        "proseWrap": "always"
     },
     "importMap": "./import_map.json",
     "unstable": ["fmt-component", "sloppy-imports"]
